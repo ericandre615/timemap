@@ -1,0 +1,20 @@
+{
+  "name": "timemap",
+  "version": "0.1.0",
+  "description": "Timemap date display formatting made easier",
+  "main": "index.js",
+  "scripts": {
+    "test": "testem"
+  },
+  "private": "true",
+  "keywords": [
+    "time",
+    "date",
+    "formatting"
+  ],
+  "author": "Eric Andre",
+  "license": "MIT",
+  "devDependencies": {
+    "testem": "^0.8.0-0"
+  }
+}

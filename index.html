@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="date-container">
+
+</div>
+
+<script src="src/timemap.js"></script>
+<script type="text/javascript">
+    var container = document.getElementById('date-container');
+    var noDate = new Timemap();
+    var notDate = new Date(2014, 'June', 06);
+    var withDate = new Timemap(new Date());
+    console.log('pnt nodate',noDate);
+    console.log('pnt withdate',withDate);
+</script>
+</body>
+</html>
