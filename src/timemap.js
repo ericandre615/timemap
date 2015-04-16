@@ -26,21 +26,6 @@ function Timemap(dateObj) {
         'December'
     ];
 
-    var monthAbbr = [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec'
-    ];
-
     var days = [
         'Sunday',
         'Monday',
@@ -51,26 +36,16 @@ function Timemap(dateObj) {
         'Saturday'
     ];
 
-    var daysAbbr = [
-        'Sun',
-        'Mon',
-        'Tue',
-        'Wed',
-        'Thu',
-        'Fri',
-        'Sat'
-    ];
-
     function format(str) {
         return str.replace(/Y/, year) // 2015
         .replace(/y/, year.toString().substr(2,3)) //15
         .replace(/mm/, month+1) //5, 9, 11
         .replace(/MM/, (month.toString().length > 1) ? month + 1 : '0'+(month+1)) // 05, 09, 11
         .replace(/M/, months[month]) // January, March, June
-        .replace(/m/, monthAbbr[month]) // Jan, Mar, Jun
+        .replace(/m/, months[month].toString().substr(0,3)) // Jan, Mar, Jun
         .replace(/dd/, day) // 1, 5, 20, 26
         .replace(/DD/, (day.toString().length > 1) ? day : '0'+day) // 01, 04, 15, 22
-        .replace(/d/, daysAbbr[dayOfWeek]) // Mon, Tue
+        .replace(/d/, days[dayOfWeek].toString().substr(0,3)) // Mon, Tue
         .replace(/D/, days[dayOfWeek]); // Monday, Tuesday
     }
     
